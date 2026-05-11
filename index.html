@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dbd9e1",
+                    "on-secondary-fixed": "#271900",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "primary-container": "#1a237e",
+                    "on-surface-variant": "#454652",
+                    "surface": "#fbf8ff",
+                    "inverse-on-surface": "#f2eff8",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#e0e0ff",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#380b00",
+                    "on-secondary-container": "#715000",
+                    "tertiary-container": "#5c1800",
+                    "tertiary-fixed-dim": "#ffb59d",
+                    "inverse-surface": "#303036",
+                    "outline": "#767683",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#fdc34d",
+                    "secondary": "#7b5800",
+                    "surface-variant": "#e4e1ea",
+                    "on-primary-container": "#8690ee",
+                    "secondary-fixed": "#ffdea6",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffdbd0",
+                    "on-primary-fixed": "#000767",
+                    "primary-fixed-dim": "#bdc2ff",
+                    "surface-container-high": "#eae7ef",
+                    "on-background": "#1b1b21",
+                    "surface-container-low": "#f5f2fb",
+                    "on-tertiary-container": "#e17c5a",
+                    "on-primary-fixed-variant": "#343d96",
+                    "on-tertiary-fixed": "#390c00",
+                    "surface-tint": "#4c56af",
+                    "background": "#fbf8ff",
+                    "surface-container": "#efecf5",
+                    "outline-variant": "#c6c5d4",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#7b2e12",
+                    "surface-container-highest": "#e4e1ea",
+                    "surface-bright": "#fbf8ff",
+                    "primary": "#000666",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1b1b21",
+                    "secondary-fixed-dim": "#f7bd48",
+                    "inverse-primary": "#bdc2ff",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "32px",
+                    "stack-lg": "64px",
+                    "margin-mobile": "20px",
+                    "stack-sm": "16px",
+                    "margin-desktop": "64px",
+                    "container-max-width": "1200px",
+                    "gutter": "24px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "display": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(184, 134, 11, 0.15);
+        }
+        .premium-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- Header: TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-xl border-b border-secondary/20 shadow-sm">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed" style="font-size: 24px;">gavel</span>
+<span class="font-display text-headline-md tracking-tight text-primary dark:text-primary-fixed uppercase">DJF ADVOGADOS</span>
+</div>
+<a class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-caps hover:opacity-80 transition-opacity active:scale-95" href="#">
+                Agendar Consulta
+            </a>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[795px] flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Um escritório de advocacia ultra-premium com estantes de livros de couro, móveis de madeira escura e iluminação suave. O ambiente exala autoridade e sofisticação com tons de azul marinho e detalhes em bronze. A composição fotográfica é cinematográfica, focada em um ambiente de reuniões executivo impecável para uma marca jurídica de prestígio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDlzIdWFLkkGvHFG-fUkOwMD0TGF0FaMMzT2y0kM3UxFsfFtwzA9Y7KOQ7DlqsNhMEsyv8anXp56bNreO-fPif1qSH_2CIt_t2-yc8ODpL1t8Q2Rj9IU5ETec006BwuxF58g7jTpleFU3udqvQSZo0TjP5kuBnHdXfedE0YBeoGV9eQ6FMWXLHgFA4UaUhCG8TG33Ld_trfVMZu47Twy1BDGv6BAKu5buRg3o9OZTFj4T71Aj7MKwIeOj72js2s0Y-FtTc1cncOmg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<div class="max-w-2xl">
+<h1 class="font-display text-display text-on-primary mb-stack-sm leading-tight">
+                    Seus direitos protegidos. Nossa experiência. Sua segurança.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-primary/80 mb-stack-md">
+                    Excelência jurídica e atendimento personalizado para garantir o melhor resultado para sua causa. Atuamos com foco na estratégia e proteção patrimonial.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-lg font-headline-md flex items-center justify-center gap-2 hover:opacity-90 transition-all premium-shadow" href="https://wa.me/5548999123261" target="_blank">
+<span class="material-symbols-outlined">chat</span>
+                        Falar com Especialista
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefícios -->
+<section class="py-stack-lg bg-surface">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-8 bg-surface-container-lowest rounded-xl premium-shadow border-t-4 border-secondary transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-secondary mb-4" style="font-size: 48px;">gavel</span>
+<h3 class="font-headline-md text-primary mb-2">Atendimento Exclusivo</h3>
+<p class="text-on-surface-variant">Cada caso é tratado com singularidade, com contato direto com os sócios do escritório.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-xl premium-shadow border-t-4 border-secondary transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-secondary mb-4" style="font-size: 48px;">shield</span>
+<h3 class="font-headline-md text-primary mb-2">Sigilo Absoluto</h3>
+<p class="text-on-surface-variant">Sua privacidade e segurança de dados são nossa prioridade máxima em cada etapa do processo.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-xl premium-shadow border-t-4 border-secondary transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-secondary mb-4" style="font-size: 48px;">scale</span>
+<h3 class="font-headline-md text-primary mb-2">Agilidade Processual</h3>
+<p class="text-on-surface-variant">Utilizamos tecnologia de ponta para monitoramento jurídico e respostas rápidas às demandas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Serviços -->
+<section class="py-stack-lg bg-primary">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-stack-lg">
+<h2 class="font-display text-headline-lg text-secondary-fixed mb-2">Nossas Especialidades</h2>
+<div class="h-1 w-24 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="glass-card p-6 rounded-xl group hover:bg-white/10 transition-colors">
+<h4 class="font-headline-md text-on-primary mb-4">Direito Civil</h4>
+<p class="text-on-primary/70 mb-6">Soluções para contratos, responsabilidade civil e conflitos familiares.</p>
+<span class="text-secondary-fixed font-label-caps flex items-center gap-1 group-hover:gap-3 transition-all">Saiba Mais <span class="material-symbols-outlined">arrow_forward</span></span>
+</div>
+<div class="glass-card p-6 rounded-xl group hover:bg-white/10 transition-colors">
+<h4 class="font-headline-md text-on-primary mb-4">Trabalhista</h4>
+<p class="text-on-primary/70 mb-6">Defesa técnica para empresas e colaboradores em relações de trabalho complexas.</p>
+<span class="text-secondary-fixed font-label-caps flex items-center gap-1 group-hover:gap-3 transition-all">Saiba Mais <span class="material-symbols-outlined">arrow_forward</span></span>
+</div>
+<div class="glass-card p-6 rounded-xl group hover:bg-white/10 transition-colors">
+<h4 class="font-headline-md text-on-primary mb-4">Previdenciário</h4>
+<p class="text-on-primary/70 mb-6">Aposentadorias, revisões de benefícios e planejamento de futuro seguro.</p>
+<span class="text-secondary-fixed font-label-caps flex items-center gap-1 group-hover:gap-3 transition-all">Saiba Mais <span class="material-symbols-outlined">arrow_forward</span></span>
+</div>
+<div class="glass-card p-6 rounded-xl group hover:bg-white/10 transition-colors">
+<h4 class="font-headline-md text-on-primary mb-4">Empresarial</h4>
+<p class="text-on-primary/70 mb-6">Consultoria estratégica para blindagem jurídica e crescimento do seu negócio.</p>
+<span class="text-secondary-fixed font-label-caps flex items-center gap-1 group-hover:gap-3 transition-all">Saiba Mais <span class="material-symbols-outlined">arrow_forward</span></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Prova Social -->
+<section class="py-stack-lg bg-surface-container-low">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-display text-headline-lg text-primary text-center mb-stack-lg">Confiança de Quem Atendemos</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Depoimento 1 -->
+<div class="bg-surface-container-highest p-8 rounded-2xl relative">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-6">"Profissionais extremamente capacitados. Resolveram uma questão trabalhista complexa com maestria e agilidade."</p>
+<p class="font-bold text-primary">Ricardo Almeida</p>
+<p class="text-label-caps text-on-surface-variant">Avaliação Google</p>
+</div>
+<!-- Depoimento 2 -->
+<div class="bg-surface-container-highest p-8 rounded-2xl relative">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-6">"O atendimento personalizado faz toda a diferença. Senti total segurança desde a primeira consulta."</p>
+<p class="font-bold text-primary">Mariana Junkes</p>
+<p class="text-label-caps text-on-surface-variant">Avaliação Google</p>
+</div>
+<!-- Depoimento 3 -->
+<div class="bg-surface-container-highest p-8 rounded-2xl relative">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-6">"Transparência e ética inabaláveis. Recomendo para qualquer empresa que busque excelência jurídica."</p>
+<p class="font-bold text-primary">Carlos Eduardo Fernandes</p>
+<p class="text-label-caps text-on-surface-variant">Avaliação Google</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Galeria -->
+<section class="py-stack-lg">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter rounded-3xl overflow-hidden">
+<img class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500" data-alt="Close-up detalhado de uma caneta tinteiro Mont Blanc luxuosa repousando sobre uma mesa de carvalho polido em um escritório jurídico de alto padrão. A iluminação é quente e lateral, destacando os reflexos metálicos da caneta e as texturas da madeira. O ambiente transmite uma atmosfera de assinatura de contratos importantes e decisões corporativas cruciais." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUpLyVaSB4m5luntGGyLwEkFGu_beRb_8dD5hOXfnqeRZfvIzB-i2aZpN7XtA7PWjOsa06BTIqCqXg2cCqf5yATdiPar6jICvwTA5MEJELv4054OJ07OlWp_pKHESpHJFHhchM2w72P66iSF5aETqw586SmHRQO2XVi4N8m5nHCWbiWYuOWT7a3AJEdQfks8EvpIgJFX-pW-0wxAa8FBvTQDaB6glPDORCcTdxTtWKgfX16c3x9jj8jekybaC94eA2vP0RRid_jPA"/>
+<img class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500" data-alt="Uma imponente biblioteca jurídica com prateleiras de madeira escura do chão ao teto, repletas de livros encadernados em couro. O estilo é clássico e prestigiado, lembrando academias tradicionais de direito. A luz suave e difusa vinda de uma janela lateral cria um ambiente de estudo, pesquisa profunda e autoridade intelectual inquestionável." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw6ZXz3IwYn2uKK5hO2VADDZOHd07oMbMHTKaQdUYkPEIsT4CDQPFIzaXi_lAT1J1zg8npiRlPsG6by0AGI1lhmy8wvsQfb0TVX6Po6vvE1OTj7pyh1AgArO8pSNUN5eB0JMIvtJvCWkv4pq3Hrpr_XnnQBQz4598UZN1TkDXQB5N2OqRwIzbFNlN_CA4kmbzY_KC-Q_VD3QijC7RzVRd0NCZb1j7fZDgmy9_9tVUFibWn2Uzl97E8SqywLAkid_5JROEjzPrfS5k"/>
+<img class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500" data-alt="Um aperto de mão firme entre dois profissionais em trajes corporativos elegantes, capturado em close-up contra o fundo de um escritório moderno e iluminado. A imagem simboliza confiança, fechamento de acordo e parceria sólida. A estética é limpa, com tons frios de azul e cinza, reforçando a seriedade e o sucesso profissional mútuo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjTtLmqX9BewGaopiD3R_2PtA6jxA3bGBpwCdubsGVOa0GM2dG3cUDxrtL3lkyBOEh9A-_KjlQCvz_G7nA_Bi_YzN2kbMctGoQQDi37gATypsq5X3Aklx_-RDP1T6bCu9aOYL7V8DDtxU55iqIeOx91LUwTnSrcBAKStz9PUg2xdc6yzgMbnnB-OSt5yZdOtlEeug3eHnApmSsVt1s7H7Mu_4BvQciNiHL4JSsNNk8ajnQgXhbx95uFt5QttVS0d7G2R9mnLdNZTU"/>
+</div>
+</div>
+</section>
+<!-- CTA Final -->
+<section class="py-stack-lg bg-gradient-to-br from-primary via-primary-container to-primary text-on-primary relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<span class="material-symbols-outlined absolute -bottom-20 -right-20 text-[300px] rotate-12">gavel</span>
+</div>
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<h2 class="font-display text-display mb-stack-sm">Não deixe seus direitos para depois.</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80 mb-stack-md max-w-xl mx-auto">
+                Resolva sua situação agora com quem entende do assunto. Nossa equipe está pronta para te atender.
+            </p>
+<a class="inline-flex items-center gap-2 bg-secondary text-on-secondary px-12 py-5 rounded-full font-headline-md hover:scale-105 transition-transform shadow-lg" href="https://wa.me/5548999123261" target="_blank">
+<span class="material-symbols-outlined">chat</span>
+                Chamar no WhatsApp
+            </a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-primary-fixed w-full py-stack-lg border-t border-secondary/10">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter text-secondary-fixed">
+<div class="flex flex-col gap-4">
+<span class="font-display text-headline-md text-secondary-fixed uppercase">DJF ADVOGADOS</span>
+<p class="font-body-md text-surface-variant/70">
+                    Excelência jurídica pautada na ética, transparência e no compromisso com o resultado para nossos clientes.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md">Links Rápidos</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-surface-variant/70 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="#">Especialidades</a>
+<a class="text-surface-variant/70 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="#">Sobre o Escritório</a>
+<a class="text-surface-variant/70 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="#">Equipe</a>
+<a class="text-surface-variant/70 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="#">Blog</a>
+<a class="text-surface-variant/70 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary" href="#">Contato</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md">Contato</h4>
+<div class="flex items-center gap-2 text-surface-variant/70">
+<span class="material-symbols-outlined">location_on</span>
+<span>Florianópolis, SC - Brasil</span>
+</div>
+<div class="flex items-center gap-2 text-surface-variant/70">
+<span class="material-symbols-outlined">call</span>
+<span>(48) 99912-3261</span>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop mt-stack-md pt-8 border-t border-secondary/10 text-center text-surface-variant/50 font-body-md">
+            © 2024 Dallabrida, Junkes e Fernandes Advogados. Todos os direitos reservados.
+        </div>
+</footer>
+</body></html>
